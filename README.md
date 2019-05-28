@@ -14,3 +14,5 @@ docker run --name conda01 -d -t -v /$(pwd):/app/data jjpan/geopandastest
 docker exec -it conda2 bash
 
 docker build -t jjpan/geopandastest .
+
+docker run --name conda01 -v /$(pwd):/app/data jjpan/geopandastest

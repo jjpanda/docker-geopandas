@@ -6,7 +6,7 @@ x = np.arange(0, 3 * np.pi, 0.1)
 y = np.sin(x) 
 plt.title("sine wave form") 
 
-print("ok ok")
+print("ok ok ok ok")
 
 # Plot the points using matplotlib 
 plt.plot(x, y) 

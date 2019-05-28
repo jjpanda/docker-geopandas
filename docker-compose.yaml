@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+  gs1:
+      image: jjpan/geopandastest
+      container_name: geospatial01
+      network_mode: "host"
+      volumes:
+#        - /$(pwd):/app/data
+        - //c/GitHub/miniconda-geospatial:/app/data

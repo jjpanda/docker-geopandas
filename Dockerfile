@@ -11,5 +11,5 @@ WORKDIR /app
 COPY . .
 
 #ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
-#CMD ["python"]
+#CMD [ "/bin/bash" ]
+CMD ["python", "test.py"]
