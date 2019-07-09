@@ -1,7 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt  
 
-f = open("greetings.txt", "r")
+f = open("data/greetings.txt", "r")
 message = f.read()
 print(message)
 f.close()

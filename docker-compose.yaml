@@ -2,10 +2,11 @@ version: "3.0"
 
 services:
   gs1:
+      build: .
       image: jjpan/geopandastest
-      container_name: geospatial01
-      network_mode: "host"
+      container_name: conda01
       volumes:
-#        - /$(pwd):/app/data
-#        - //c/GitHub/miniconda-geospatial:/app/data
-        - //c/projects/geo-spatial:/app/data
+        - /home/geopandatest:/app/data
+        - /home/geopandatest/greetings.txt:/app/data/greetings.txt
+#        - C:\geopandatest:/app/data
+#        - C:\geopandatest/greetings.txt:/app/data/greetings.txt

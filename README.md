@@ -1,20 +1,26 @@
-docker run --rm  --env="DISPLAY" -v /${PWD}:/data jjpan/geopandastest
+# Docker for anaconda::geopandas
 
-docker run -t -d  --name conda1 jjpan/geopandastest
+### Prerequisites
+- Host machine running Docker
+- Docker has been configured for windows shared drive
+- Install compose if using docker-compose
 
-docker run -t -d --name conda01 -v //C/Temp:/app/data jjpan/geopandastest
-
-docker volume create --name datafile
-
-docker exec -it conda2 bash
-
-
-docker run --name conda01 -d -t -v /$(pwd):/app/data jjpan/geopandastest
-
-docker exec -it conda2 bash
-
+## Execution Instructions - Docker
+```
+## Docker build
 docker build -t jjpan/geopandastest .
 
-docker run --name conda01 -v /$(pwd):/app/data jjpan/geopandastest
+## Docker run
+# For windows
+docker run --rm --name conda01 -v /$(pwd):/app/data -v /$(pwd)/greetings.txt:/app/data/greetings.txt jjpan/geopandastest
 
-docker run --name conda01 -v /$(pwd):/app/data -v /$(pwd)/example.csv:/app/data/example.csv jjpan/geopandastest
+# For linux
+docker run --rm --name conda01 -v "$PWD":/app/data -v "$PWD"/greetings.txt:/app/data/greetings.txt jjpan/geopandastest
+```
+For any changes in test.py, you need to re-execute docker build and then docker run.
+
+## Execution Instructions - docker-compose
+```
+docker-compose up
+docker container ls
+```
