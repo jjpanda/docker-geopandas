@@ -8,7 +8,7 @@ RUN conda config --add channels conda-forge && conda update -y conda \
 #RUN mkdir -p /app
 WORKDIR /app
 
-COPY . .
+COPY test.py test.py
 
 #ENTRYPOINT [ "/usr/bin/tini", "--" ]
 #CMD [ "/bin/bash" ]
