@@ -3,7 +3,7 @@ FROM continuumio/miniconda3
 LABEL maintainer="phua.jj@pg.com"
 
 RUN conda config --add channels conda-forge && conda update -y conda \
-    && conda install -y geopandas contextily matplotlib
+    && conda install -y geopandas contextily matplotlib geoplot
 
 #RUN mkdir -p /app
 WORKDIR /app

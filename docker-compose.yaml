@@ -7,4 +7,5 @@ services:
       network_mode: "host"
       volumes:
 #        - /$(pwd):/app/data
-        - //c/GitHub/miniconda-geospatial:/app/data
+#        - //c/GitHub/miniconda-geospatial:/app/data
+        - //c/projects/geo-spatial:/app/data
