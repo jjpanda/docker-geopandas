@@ -1,9 +1,7 @@
 FROM continuumio/miniconda3
 
-#LABEL maintainer="random"
-
-RUN conda config --add channels conda-forge && conda update -y conda \
-    && conda install -y geopandas contextily matplotlib geoplot
+RUN /opt/conda/bin/conda config --add channels conda-forge && /opt/conda/bin/conda update -y conda \
+    && /opt/conda/bin/conda install -y geopandas contextily matplotlib geoplot
 
 WORKDIR /app
 
